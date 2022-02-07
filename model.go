@@ -54,10 +54,10 @@ type analyzeReqBody struct {
 
 func (rb analyzeReqBody) Validate() error {
 	if len(rb.InputText) == 0 {
-		return NewErrBadRequest("Text 1 cannot be empty!")
+		return NewErrBadRequest("Source Text cannot be empty!")
 	}
 	if len(rb.RefText) == 0 {
-		return NewErrBadRequest("Text 2 cannot be empty!")
+		return NewErrBadRequest("Target Text cannot be empty!")
 	}
 	return nil
 }
